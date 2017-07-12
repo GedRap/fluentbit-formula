@@ -5,6 +5,7 @@ After=network.target
 
 [Service]
 Type=simple
+Environment=HOSTNAME={{ grains['id'] }}
 ExecStart=/usr/local/bin/fluent-bit -c /etc/fluent-bit/fluent-bit.conf -R /etc/fluent-bit/parsers.conf
 Restart=always
 
