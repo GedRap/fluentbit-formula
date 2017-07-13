@@ -4,5 +4,5 @@
 {% from "fluent-bit/map.jinja" import fluent_bit with context %}
 
 fluent-bit-pkg:
-  pkg.uptodate:
+  pkg.latest:
     - name: {{ fluent_bit.pkg }}
